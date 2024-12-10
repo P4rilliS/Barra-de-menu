@@ -8,14 +8,23 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
+    <div class="menu-btn sidebar-btn" id="sidebar-btn">
+        <i class='bx bx-menu' ></i>
+        <i class='bx bx-x' ></i>
+    </div>
+    <div class="dark-mode-btn" id="dark-mode-btn">
+        <i class='bx bx-moon'></i>
+        <i class='bx bx-sun' ></i>
+    </div>
+    <div class="sidebar" id="sidebar">
         <div class="header">
-            <div class="menu-btn">
+            <div class="menu-btn" id="menu-btn">
                 <i class='bx bx-chevron-left'></i>
             </div>
             <div class="brand">
-                <img src="/IMG/logo.svg" alt="logo">
-                <span>29:17 segundos</span>
+                <img class="logo-white" src="./IMG/logo_black.png" alt="logo">
+                <img  class="logo-dark" src="./IMG/logo_white.png" alt="logo">
+                <img class="logo-small" src="./IMG/logo-peq.png" alt="logo">
             </div>
         </div>
         <div class="container">
@@ -24,58 +33,63 @@
                 <input type="search" placeholder="Search">
             </div>
             <ul class="menu">
-                <li class="menu-items menu-item-static active">
+                <li class="menu-item menu-item-static active">
                     <a href="#" class="menu-link">
                         <i class='bx bx-home-alt-2'></i>
-                        <span>Home</span>
+                        <span>Inicio</span>
                     </a>
                 </li>
-                <li class="menu-items menu-item-static">
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#" class="menu-link">
+                        <i class='bx bxs-log-in'></i>
+                        <span>Sesion</span>
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-link">Iniciar Sesion</li>
+                        <li class="sub-menu-link">Registrarse</li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-dropdown">
+                    <a href="#" class="menu-link">
+                        <i class='bx bx-wrench'></i>
+                        <span>Tecnicos</span>
+                        <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-link">Mecanica</li>
+                        <li class="sub-menu-link">Plomeria</li>
+                        <li class="sub-menu-link">Refrigeracion</li>
+                        <li class="sub-menu-link">PC</li>
+                        <li class="sub-menu-link">Electricidad</li>
+                        <li class="sub-menu-link">Celular</li>
+                        <li class="sub-menu-link">Linea Blanca</li>
+                        <li class="sub-menu-link">Fumigacion</li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-static">
                     <a href="#" class="menu-link">
                         <i class='bx bx-bar-chart-alt-2' ></i>
-                        <span>Dashboard</span>
+                        <span>Estadisticas</span>
                     </a>
                 </li>
-                <li class="menu-items menu-item-dropdown">
+                <li class="menu-item menu-item-static">
                     <a href="#" class="menu-link">
-                        <i class='bx bx-shopping-bag' ></i>
-                        <span>Tienda</span>
-                        <i class='bx bx-chevron-down'></i>
+                        <i class='bx bx-question-mark'></i>
+                        <span>Peguntas Frecuentes</span>
                     </a>
-                    <ul class="sub-menu">
-                        <li class="sub-menu-link">Productos</li>
-                        <li class="sub-menu-link">Ordenes</li>
-                        <li class="sub-menu-link">Suscipciones</li>
-                    </ul>
-                </li>
-                <li class="menu-items menu-item-static">
-                    <a href="#" class="menu-link">
-                        <i class='bx bx-task' ></i>
-                        <span>Lista</span>
-                    </a>
-                </li>
-                <li class="menu-items menu-item-dropdown">
-                    <a href="#" class="menu-link">
-                        <i class='bx bx-file-blank' ></i>
-                        <span>Archivo</span>
-                        <i class='bx bx-chevron-down'></i>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="sub-menu-link">Imagenes</li>
-                        <li class="sub-menu-link">Audios</li>
-                    </ul>
                 </li>
             </ul>
         </div>
         <div class="footer">
             <ul class="menu">
-                <li class="menu-items menu-item-static">
+                <li class="menu-item menu-item-static">
                     <a href="#" class="menu-link">
                         <i class='bx bx-bell' ></i>
                         <span>Notificaciones</span>
                     </a>
                 </li>
-                <li class="menu-items menu-item-static">
+                <li class="menu-item menu-item-static">
                     <a href="#" class="menu-link">
                         <i class='bx bx-cog' ></i>
                         <span>Configuracion</span>
@@ -88,7 +102,6 @@
                 </div>
                 <div class="user-data">
                     <span class="name">Sergio Parilli</span>
-                    <span class="email">Slpl@gmail.com</span>
                 </div>
                 <div class="user-icon">
                     <i class='bx bx-exit' ></i>                    
@@ -96,7 +109,63 @@
             </div>
         </div>
     </div>
-
+    <main>
+        <section class="section">
+            <div class="container-text">
+                <h1>Te ayudamos a buscar el Técnico <br> en <span id="palabra"></span> que necesitas.</h1>
+            </div>
+            <div class="container-card">
+                <div class="box">
+                    <div class="icon">
+                        <img src="./IMG/mecanic.svg" alt="PC">
+                    </div>
+                    <h3>Mecánica</h3>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <img src="./IMG/water.svg" alt="PC">
+                    </div>
+                    <h3>Plomería</h3>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <img src="./IMG/air.svg" alt="PC">
+                    </div>
+                    <h3>Refrigeración</h3>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <img src="./IMG/pc.svg" alt="PC">
+                    </div>
+                    <h3>Computación</h3>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <img src="./IMG/electric.svg" alt="PC">
+                    </div>
+                    <h3>Electricista</h3>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <img src="./IMG/smartphone.svg" alt="PC">
+                    </div>
+                    <h3>Celular</h3>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <img src="./IMG/white-line.svg" alt="PC">
+                    </div>
+                    <h3>Línea Blanca</h3>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <img src="./IMG/insect.svg" alt="PC">
+                    </div>
+                    <h3>Fumigación</h3>
+                </div>
+            </div>        
+        </section>
+    </main>
     <script src="script.js"></script>   
 </body>
 </html>
