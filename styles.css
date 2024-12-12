@@ -35,6 +35,7 @@ body.dark-mode{
 
 body{
     display: flex;
+    flex-direction: column;
     width: 100%;
     /* min-height: 100vh; */
     background-color: var(--color-bg);
@@ -292,6 +293,9 @@ body.dark-mode .sub-menu::before{
     display: flex;
     margin: 0 0.7rem 0 0.35rem;
 }
+.sidebar.minimize .user-img{
+    display: flex;
+}
 .user-data{
     display: flex;
     flex-direction: column;
@@ -303,6 +307,9 @@ body.dark-mode .sub-menu::before{
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--color-text-primary);
+}
+.sidebar.minimize .user-data .name{
+    display: none;
 }
 .user-icon{
     margin-left: auto;
@@ -400,7 +407,6 @@ main h1{
 
 body.dark-mode .logo-dark {
     display: block;
-    /* width: 10rem; */
 }
 body.dark-mode .logo-white {
     display: none;
@@ -437,4 +443,7 @@ body.dark-mode .dark-mode-btn i:first-child{
 
 #palabra{
     color: #ff8c00;
+}
+.sidebar.minimize .two-main{
+    /* padding-left: 7rem; */
 }

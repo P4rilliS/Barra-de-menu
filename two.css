@@ -1,0 +1,30 @@
+.two-main{
+    padding-left: 7rem;
+}
+.section-two{
+    display: flex;
+    flex-direction: column;
+    /* text-align: start; */
+    width: 100%;
+    padding: 1rem;
+    gap: 2rem;
+}
+.only-text{
+    color: var(--color-text-primary);
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+.img-how-run{
+    width: 100%;
+    object-fit: cover;
+}
+.only-text span {
+    font-size: 1.5rem;
+}
+.find{
+    margin-left: 2rem;
+}

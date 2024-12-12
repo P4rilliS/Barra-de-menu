@@ -16,8 +16,11 @@
     .search:hover{
         box-shadow:none;
     }
-    main{
+    .one-main{
         padding: 1rem;
+    }
+    .two-main{
+        padding-left: 50rem;
     }
 }
 @media (max-width: 700px) or (max-height: 683px){
@@ -30,6 +33,7 @@
     }
     .sidebar-btn{
         display:flex;
+        margin-left: auto;
         right: 1rem;
         padding: 1.2rem;
     }
@@ -45,8 +49,11 @@
     body.sidebar-hidden .sidebar-btn i:first-child{
         display: none;
     }
-    main{
+    .one-main{
         padding: 1rem;
+    }
+    .two-main{
+        padding-left: 2rem;
     }
 }
 
@@ -78,4 +85,19 @@
         border-radius: 5rem;
         padding: 2rem 3rem;
     }
+    .section-two{
+        display: flex;
+        flex-direction: row;
+    }
+    .only-text{
+        width: 40%;
+    }
+    .find li{
+        padding: 0.4rem 0;
+    }
+    .img-how-run{
+        width: 60%;
+        object-fit: contain;
+    }
+
 }
