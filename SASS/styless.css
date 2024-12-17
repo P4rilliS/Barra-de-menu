@@ -1,0 +1,18 @@
+body {
+  background-color: red;
+  text-align: center;
+}
+
+section {
+  background-color: red;
+}
+section h1 {
+  color: green;
+}
+section ul {
+  list-style: none;
+}
+section ul li {
+  display: inline-block;
+  margin: 0 10px;
+}/*# sourceMappingURL=styless.css.map */
